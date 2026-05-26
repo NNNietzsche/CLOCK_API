@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "ClockCode";
+  src: url("./fonts/CascadiaMono.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --font-code: "ClockCode", "Cascadia Code", Consolas, "Courier New", monospace;
+  --bg: #344d63;
+  --text: #f6f1e8;
+  --ink: #f6f1e8;
+  --blue: #55a9ff;
+  --yellow: #fff4a8;
+  --coral: #ff9f7c;
+  --line: #f1eee9;
+  --second: #e59a72;
+  --clock-fill: rgba(52, 77, 99, 0.84);
+  --clock-border: rgba(246, 241, 232, 0.9);
+  --clock-glow: rgba(255, 199, 170, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-code);
+  font-weight: 300;
+  font-variant-ligatures: none;
+  transition:
+    background 900ms ease,
+    color 900ms ease;
+}
+
+.clock-shell {
+  width: fit-content;
+  max-width: 96vw;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 72px);
+  padding: clamp(18px, 4vw, 40px);
+}
+
+.code-panel {
+  overflow: visible;
+}
+
+pre {
+  margin: 0;
+  white-space: pre;
+  font-family: var(--font-code);
+  font-weight: 300;
+  font-size: clamp(16px, 3vw, 22px);
+  line-height: 1.58;
+  letter-spacing: 0;
+}
+
+code {
+  color: var(--text);
+  font-family: var(--font-code);
+  font-weight: 300;
+}
+
+.keyword,
+.prop {
+  color: var(--blue);
+}
+
+.number {
+  color: var(--yellow);
+}
+
+.string {
+  color: var(--coral);
+}
+
+.analog-clock {
+  display: grid;
+  place-items: center;
+}
+
+.clock-face {
+  position: relative;
+  width: clamp(150px, 24vw, 188px);
+  aspect-ratio: 1;
+  border: 3px solid var(--clock-border);
+  border-radius: 50%;
+  background: var(--clock-fill);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 20px var(--clock-glow),
+    0 0 36px rgba(255, 199, 170, 0.28);
+  transition:
+    background 900ms ease,
+    border-color 900ms ease,
+    box-shadow 900ms ease;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 4px;
+  border-radius: 99px;
+  transform-origin: 50% 100%;
+  translate: -50% 0;
+  transition: background 900ms ease;
+}
+
+.hour-hand {
+  height: 35%;
+  background: var(--ink);
+  opacity: 0.82;
+}
+
+.minute-hand {
+  height: 44%;
+  background: var(--ink);
+}
+
+.second-hand {
+  width: 3px;
+  height: 44%;
+  background: var(--second);
+}
+
+.pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ink);
+  translate: -50% -50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 720px) {
+  body {
+    place-items: center;
+  }
+
+  .clock-shell {
+    width: min-content;
+    max-width: 100vw;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 34px;
+    padding: 28px 18px 42px;
+  }
+
+  .code-panel {
+    width: min-content;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  pre {
+    font-size: clamp(14px, 4.5vw, 19px);
+  }
+
+  .analog-clock {
+    order: -1;
+  }
+}

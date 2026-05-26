@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实时代码时钟</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="clock-shell" aria-label="实时代码时钟">
+      <section class="code-panel" aria-live="polite">
+        <pre><code><span class="keyword">const</span> currentTime = {
+  <span class="prop">year</span>: <span class="number" id="year">2026</span>,
+  <span class="prop">month</span>: <span class="number" id="month">05</span>,
+  <span class="prop">day</span>: <span class="number" id="day">26</span>,
+  <span class="prop">dayOfWeek</span>: <span class="string" id="dayOfWeek">"Tuesday"</span>,
+  <span class="prop">hour</span>: <span class="number" id="hour">22</span>,
+  <span class="prop">minute</span>: <span class="number" id="minute">37</span>,
+  <span class="prop">second</span>: <span class="number" id="second">56</span>,
+  <span class="prop">dayProgress</span>: <span class="number" id="dayProgress">94.30%</span>
+};</code></pre>
+      </section>
+
+      <section class="analog-clock" aria-label="模拟时钟">
+        <div class="clock-face">
+          <span class="hand hour-hand" id="hourHand"></span>
+          <span class="hand minute-hand" id="minuteHand"></span>
+          <span class="hand second-hand" id="secondHand"></span>
+          <span class="pin"></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
