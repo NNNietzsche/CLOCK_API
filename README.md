@@ -56,6 +56,8 @@ API 返回示例：
   "timestamp": 1780007876000
 }
 ```
+<img width="659" height="383" alt="image" src="https://github.com/user-attachments/assets/a2728448-c069-4385-8c15-e3c1a32b047a" />
+
 
 ## 说明
 
