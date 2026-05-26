@@ -23,7 +23,7 @@ http://localhost:3000/api/time
 ```html
 <div id="my-clock"></div>
 
-<script src="http://localhost:3000/clock-widget.js"></script>
+<script src="https://nnnietzsche.github.io/CLOCK_API/clock-widget.js"></script>
 <script>
   CodeClock.mount("#my-clock");
 </script>
