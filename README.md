@@ -1,24 +1,16 @@
 # 实时代码时钟
 
-启动本地网页和 API：
+一个可以嵌入网页的实时代码风格时钟。
 
-```bash
-node server.js
-```
-
-打开网页：
+## 在线预览
 
 ```text
-http://localhost:3000
+https://nnnietzsche.github.io/CLOCK_API/
 ```
 
-调用 API：
+## 在网页中嵌入时钟
 
-```text
-http://localhost:3000/api/time
-```
-
-在别的网页里嵌入整套时钟 UI：
+把下面代码放进你的 HTML 页面：
 
 ```html
 <div id="my-clock"></div>
@@ -29,10 +21,28 @@ http://localhost:3000/api/time
 </script>
 ```
 
-也可以直接打开示例：
+## 嵌入示例
 
 ```text
-http://localhost:3000/embed-demo.html
+https://nnnietzsche.github.io/CLOCK_API/embed-demo.html
+```
+
+## 本地启动网页和 API
+
+```bash
+node server.js
+```
+
+本地网页：
+
+```text
+http://localhost:3000
+```
+
+本地数据 API：
+
+```text
+http://localhost:3000/api/time
 ```
 
 API 返回示例：
@@ -52,3 +62,6 @@ API 返回示例：
 }
 ```
 
+## 说明
+
+GitHub Pages 可以使用时钟 UI 和 `clock-widget.js`，但不能运行 `server.js`，所以 `/api/time` 只支持本地 Node 服务。
