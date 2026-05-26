@@ -51,3 +51,5 @@ API 返回示例：
   "timestamp": 1780007876000
 }
 ```
+
+<script src="https://nnnietzsche.github.io/CLOCK_API/clock-widget.js"></script>
