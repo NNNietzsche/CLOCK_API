@@ -52,4 +52,9 @@ API 返回示例：
 }
 ```
 
+<div id="my-clock"></div>
+
 <script src="https://nnnietzsche.github.io/CLOCK_API/clock-widget.js"></script>
+<script>
+  CodeClock.mount("#my-clock");
+</script>
