@@ -21,11 +21,6 @@ https://nnnietzsche.github.io/CLOCK_API/
 </script>
 ```
 
-## 嵌入示例
-
-```text
-https://nnnietzsche.github.io/CLOCK_API/embed-demo.html
-```
 
 ## 本地启动网页和 API
 
